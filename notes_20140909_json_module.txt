@@ -1,0 +1,166 @@
+20140909 jstile:
+
+----------------------------------------
+next week suggestions
+python module of the week
+
+Facilitate over teaching
+
+Look here: http://pymotw.com/2/  
+
+Find something to work on for next week.
+---------------------------------------------------
+
+json ( javascript object notation )
+
+xml
+
+csv ( character seperated values )
+
+---------------------------------------------------
+
+
+https://github.com/PyClass/PyClass-lesson-plans/blob/master/1_json_module.md
+
+Objects :  containers with methods and properties
+
+We can have collecitons of objects
+
+array or list:  container of ordered
+
+------------------------------------------------------------------
+https://docs.python.org/2/library/json.html#encoders-and-decoders
+Convertion:
+
+JSON 	Python
+object 	dict
+array 	list
+string 	unicode
+number (int) 	int, long
+number (real) 	float
+true 	True
+false 	False
+null 	None
+------------------------------------------------------------------
+json valid/invalid
+
+False: 0.
+True:  0c0
+False: 0
+False: 01
+False: .5
+True:  0.0
+False: 0.
+True:   a = { "key": 42 } // double quote
+False:  a = { "key": func() } // json objects are not exectued
+
+Stores: data types (string, number), containers (object, array), binary (true, false)
+------------------------------------------------------------------
+Duck Typing - http://en.wikipedia.org/wiki/Duck_typing
+
+duck = [ 1,2,3,4 ]
+
+# Non Static Ducktyping  trades off memory and speed for fast writing
+ls = [ 'a', 1, {"b":23} ]
+
+a = range(0,100,2)
+duck = range(0,100,5)
+
+dir(a)
+# shows all the stuff for list
+
+dir(ls)
+# shows methos for the list parts
+# shows methods for the dict part
+
+a_tup = tuple(a)
+
+Out[46]: {0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95}
+
+In [47]: a
+Out[47]: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+
+In [46]: set(a)
+Out[46]: {0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95}
+
+
+assert id(mouse) == id(cat)
+
+cat = "help"   # point to ne
+
+
+---------------------
+To Get around copy by reference:
+
+import copy
+mouse = copy .deepcopy(cat)
+
+------------------
+# this shows namespace before 
+import json
+dir()
+
+# This polutes the namespace
+import json *
+dir()
+
+num = 'four'
+type(num)
+
+Well nmaed:
+  num = 4
+  num_str = str(num)
+
+
+ipython library called request
+http://docs.python-requests.org/en/latest/
+
+Download the file
+import requests
+url = "https://raw.githubusercontent.com/PyClass/PyClass-lesson-plans/master/1_json_module/abcdef.json"
+r = requests.get(url)
+r.status_code
+
+import json
+r.json()
+
+#  {u'a': 1, u'b': 2, u'c': 3, u'd': 4, u'e': 5, u'f': 6}
+
+print r.json()
+
+import json as j
+
+# Look at the source of the module
+# see what it is doing
+# PRETTY COOL
+import inspect
+print inspect.getsource(r.json)
+ 
+# Load the data
+json_line = r.json()
+
+with open("stored_data.json", "w") as fp:
+    json.dump(son_line, fp)
+
+with open("stored_data.json", "w") as fp:
+    json.dump(json_line, fp,indent=4)
+
+output_mode = 'r'
+with open('stored_data.json',output_mode) as f:
+    loaded_json_dict = json.load(f)
+
+
+4 major functions:
+  dump
+  dumps              // dump string
+  load               // 
+  loads              // loads string
+  encoders/decoders  // do weird stuff
+  
+json.dumps(r.json())
+'{"a": 1, "c": 3, "b": 2, "e": 5, "d": 4, "f": 6}'
+
+
+# pretty print
+python -m json.tool file.txt
+

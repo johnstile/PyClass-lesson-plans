@@ -1,0 +1,78 @@
+20140916 jstile:
+
+Numbers in python
+
+https://github.com/PyClass/PyClass-lesson-plans/blob/master/9_numbers.md
+
+https://docs.python.org/2/library/numeric.html
+
+operator module performs operations on numbers
+https://docs.python.org/2/library/operator.html
+
+
+# python makes a decision for you
+# python integer holds the same number of bytes as a long
+x = 5
+
+type(x)
+
+x=y*.4
+type(x)
+
+Out[219]: float
+
+Floats should not be used for high precision math.
+
+x = 1.1
+y = 2.2
+z = x + y
+Out[241]: 3.3000000000000003
+
+
+# you can use this library to do math
+import fractions
+
+# will act at a fixed precision
+# decimal has a parent, and the top level object is object
+import decimal
+cat = decimal.Decimal(5)
+type(cat)
+
+
+# you could fined the parent
+
+
+
+The quantize() method rounds to a fixed number of decimal places. If the Inexact trap is set, it is also useful for validation:
+    
+The significance of a new Decimal is determined solely by the number of digits input. Context precision and rounding only come into play during arithmetic operations.
+getcontext().prec = 6
+
+D_prec = 28
+decimal.getcontext().prec = D_prec
+x /y
+# Decimal('0.1428571428571428571428571429')
+
+#---------------------------------------------------------------
+import decimal
+
+import fractions
+D= decimal.Decimal
+F = fractions.Fraction
+x = D(1)
+y = D(7)
+z = F.from_decimal(x/y)
+z
+# creates a huge decimal and denominator
+#   Fraction(1428571428571428571428571429, 10000000000000000000000000000)
+
+F( float(1)/float(7) )
+# creates something huge again.
+#   Fraction(2573485501354569, 18014398509481984)
+
+z.limit_denominator(100)
+
+===================================================================
+bascily this all sucks.
+learn numbpy
+

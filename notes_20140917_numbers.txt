@@ -1,0 +1,61 @@
+20140917 jstile:
+
+Flask
+servre side web development
+
+
+basic library is flask
+
+virtualenv is desirable because 
+------------------------------------------------------
+
+Setup virtualenv
+
+virtualenv <new folder name>
+
+python2.7
+
+# create new fask
+virtualenv -p python2.7 my_flask
+
+# activate the flask
+cd my_flask
+
+. bin/activate
+
+--------------------------
+windows
+call Scripts\activate
+--------------------------
+
+# show what is installed
+pip freeze
+
+    wsgiref==0.1.2pi
+
+# install flasak
+pip install flask
+
+# check what is installed
+pip freeze
+
+    Flask==0.10.1
+    Jinja2==2.7.3
+    MarkupSafe==0.23
+    Werkzeug==0.9.6
+    itsdangerous==0.24
+    wsgiref==0.1.2
+
+
+# save it to a file that can be used to setup another site
+pip freeze > requirements.txt 
+
+# http://flask.pocoo.org/
+# does great pythonic code
+
+ python ./hello.py
+ * Running on http://127.0.0.1:5000/
+
+http://127.0.0.1:5000/
+
+

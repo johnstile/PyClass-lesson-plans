@@ -1,0 +1,27 @@
+20140910 jstile:
+
+regex is a little language for pattern matching
+Compact, small language used to match strings.
+
+
+We will use strings that express a patern
+
+we will use raw
+
+
+
+Simpe:
+
+import re
+p = re.compile('ab*')
+
+p = re.compile('ab*', re.IGNORECASE )
+
+
+Keep the regular expression in a raw or 8bit unicode string
+
+
+using regex:
+
+import re
+
