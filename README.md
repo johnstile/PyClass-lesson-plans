@@ -1,11 +1,15 @@
 
 ### PSAs and Events
 
+**PSA 10-1-14:** PyClass starts at 700 PM, try to come a few minutes earlier. We want to finish up by nine so people can hack or catch their preferred train home.  You can come at any time, but YMMV.
+
 **PSA 8-19-14:** The [noisebridge wiki](https://noisebridge.net/wiki/PyClass) and [github readme](https://github.com/PyClass/PyClass-lesson-plans) files have the same information and updates.
 
 **PSA 8-16-14:** The new curriculum for the Noisebridge PyClass is a crash course in the Python standard library, also touching on modules that are popular but not quite part of the standard modules. Scroll down to see the course list.
 
 ### Scheduled Weekly Meeting Times
+
+We set up the space at 6:45 PM - try to arrive early to help if you are able to.
 
 * Tuesday 7:00 - 9:00 PM PST - 'Turing' Classroom
 * Wednesday 7:00 - 9:00 PM PST - 'Church' Classroom
@@ -28,13 +32,13 @@ To best experience the course, spend a short time reviewing the course materials
 The ideal student for this course can grasp the following code (feel free to use web resources to look up anything you don't understand):
 
 ```python
-word_frequency_dict = {}
+letter_frequency_dict = {}
 word = "noisebridge"
  
 for letter in word:
-    times = word_frequency_dict.get(letter, 0)
+    times = letter_frequency_dict.get(letter, 0)
     times += 1
-    word_frequency_dict[letter] = times
+    letter_frequency_dict[letter] = times
 ```
 
 If you are new to python or programming in general here are some excellent resources:    
@@ -59,21 +63,30 @@ Please email PyClass@googlegroups.com if you want to know what courses are comin
 2. [Control Flow and Exceptions](https://github.com/PyClass/PyClass-lesson-plans/blob/master/5_control_statements.md)     
 3. [itertools, and Functional Programming](https://github.com/PyClass/PyClass-lesson-plans/blob/master/3_functional_and_control.md)    
 4. [Built-in Types and String Services](https://github.com/PyClass/PyClass-lesson-plans/blob/master/4_builtintypes_stringservices.md)    
-5. Numeric and Mathematical Modules, and Operators    
-6. argparse, ConfigParser, and more - configuring your applications    
-7. pip, virtualenv, packaging, versions, and inspect.    
-8. Logging your applications: logging, logging.config, logging.handlers    
-9. Exceptions and Debugging: Exception behavior, custom exceptions, pdb, cProfile, timeit, time, trace.    
-10. os, sys, and io (Caution, here be Python 3, inside the io module)    
-11. (potential for a unittest course)    
-12. Built-in Functions    
+5. [Coding a module: rot13](https://github.com/PyClass/PyClass-lesson-plans/blob/master/10_rot13.md) 
+6. [Matplotlib Workshop (using Socrata API](https://github.com/PyClass/PyClass-lesson-plans/blob/master/6_socrata_matplotlib_workshop.md)
+7. [Flask - Installfest & Basics](https://github.com/PyClass/PyClass-lesson-plans/blob/master/11_server_side_dev_flask.md)
+8. [Working with numbers in Python](https://github.com/PyClass/PyClass-lesson-plans/blob/master/9_numbers.md) 
+9. [Programming Mastermind (the game)](https://github.com/PyClass/PyClass-lesson-plans/blob/master/13_games.md)
+10. [Unit Testing and Python's unittest Module](https://github.com/PyClass/PyClass-lesson-plans/blob/master/14_unittest.md)
+11. [OOP in Python](https://github.com/PyClass/PyClass-lesson-plans/blob/master/15_classy_OOP.md)
+12. [Keywords & Control Flow](https://github.com/PyClass/PyClass-lesson-plans/blob/master/16_keywords_and_control_flow.md)
+13. [Project: Calculate Angles of a Polygon](https://github.com/PyClass/PyClass-lesson-plans/blob/master/17_polygon_abstraction.md)
+14. [Project: Unit testing our projects](https://github.com/PyClass/PyClass-lesson-plans/blob/master/18_unittesting_more.md)
+15. [Functions](https://github.com/PyClass/PyClass-lesson-plans/blob/master/12_functions.md)
+16. [Git](https://github.com/PyClass/PyClass-lesson-plans/blob/master/2_git_module.md) - incomplete
+17. [Functional Programming in Python](https://github.com/PyClass/PyClass-lesson-plans/blob/master/3_functional_and_control.md)
+18. [Some Idioms for Python Builtins](https://github.com/PyClass/PyClass-lesson-plans/blob/master/7_built-ins_and_idioms.md)
+
+
+
 
 
 ###  OS / Environment / Versions
 
 This section is under development.
 
-For the sake of our sanity we use Python 2.7.1+ for this course.
+For the sake of our sanity we use Python 2 for this course.
 
 Installing Python with [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/)
 
@@ -99,6 +112,17 @@ Another critical tool is git:
 ###For Lesson Planners:
 
 ####Some Modules to include
+
+
+5. Numeric and Mathematical Modules, and Operators    
+6. argparse, ConfigParser, and more - configuring your applications    
+7. pip, virtualenv, packaging, versions, and inspect.    
+8. Logging your applications: logging, logging.config, logging.handlers    
+9. Exceptions and Debugging: Exception behavior, custom exceptions, pdb, cProfile, timeit, time, trace.    
+10. os, sys, and io (Caution, here be Python 3, inside the io module)    
+11. (potential for a unittest course)    
+12. Built-in Functions    
+
 
 * Control Structures, itertools - Teddy    
 * requests    
